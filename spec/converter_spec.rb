@@ -6,4 +6,8 @@ describe Converter do
   it 'can take numbers for conversion' do
     expect(converter).to respond_to(:convert).with(1).argument
   end
+
+  it 'can convert the number 1 into a roman numeral' do
+    expect(converter.convert(1)).to eq('I')
+  end
 end
