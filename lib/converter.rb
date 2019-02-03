@@ -1,13 +1,14 @@
 class Converter
   NUMERALS = {
     1 => "I",
-    2 => "II",
     5 => "V"
   }
 
   def convert(number)
-    if number == 3
-      NUMERALS[1] + NUMERALS[2]
+    if number == 2
+      NUMERALS[1] + NUMERALS[1]
+    elsif number == 3
+      NUMERALS[1] + NUMERALS[1] + NUMERALS[1]
     elsif number == 4
       NUMERALS[1] + NUMERALS[5]
     elsif number == 6
