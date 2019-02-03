@@ -10,4 +10,8 @@ describe Converter do
   it 'can convert the number 1 into a roman numeral' do
     expect(converter.convert(1)).to eq('I')
   end
+
+  it 'can convert the number 2 into a roman numeral' do
+    expect(converter.convert(2)).to eq("II")
+  end
 end
