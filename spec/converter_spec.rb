@@ -18,4 +18,8 @@ describe Converter do
   it 'can convert the number 3 into a roman numeral using 1 and 2' do
     expect(converter.convert(3)).to eq("III")
   end
+
+  it 'can convert the number 4 into a roman numeral using 5 and 1' do
+    expect(converter.convert(4)).to eq("IV")
+  end
 end
