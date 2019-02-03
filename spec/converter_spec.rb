@@ -22,4 +22,8 @@ describe Converter do
   it 'can convert the number 4 into a roman numeral using 5 and 1' do
     expect(converter.convert(4)).to eq("IV")
   end
+
+  it 'can convert the number 6 into a roman numeral using 5 and 1' do
+    expect(converter.convert(6)).to eq("VI")
+  end
 end

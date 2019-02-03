@@ -10,6 +10,8 @@ class Converter
       NUMERALS[1] + NUMERALS[2]
     elsif number == 4
       NUMERALS[1] + NUMERALS[5]
+    elsif number == 6
+      NUMERALS[5] + NUMERALS[1]
     else
       NUMERALS[number]
     end
