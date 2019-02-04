@@ -3,6 +3,10 @@ require 'converter'
 describe Converter do
   subject(:converter) { described_class.new }
 
+  it 'initialises with an array for storing roman numerals' do
+    expect(converter.roman_array).to eq([])
+  end
+
   it 'can take numbers for conversion' do
     expect(converter).to respond_to(:convert).with(1).argument
   end
@@ -26,6 +30,4 @@ describe Converter do
   it 'can convert the number 6 into a roman numeral using 5 and 1' do
     expect(converter.convert(6)).to eq("VI")
   end
-
-  # it 'can convert the number 7 into a roman numeral using '
 end
