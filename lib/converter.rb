@@ -1,11 +1,9 @@
 class Converter
   attr_reader :roman_array
 
-
   def initialize
     @roman_array = []
   end
-
 
   NUMERALS = {
     1 => "I",
