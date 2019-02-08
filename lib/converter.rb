@@ -3,24 +3,22 @@ class Converter
 
   def initialize
     @roman_array = []
+    @string = ''
   end
 
   NUMERALS = {
-    1 => "I",
-    5 => "V"
+    5 => "V",
+    4 => "IV",
+    1 => "I"
   }
 
   def convert(number)
-    if number == 2
-      NUMERALS[1] + NUMERALS[1]
-    elsif number == 3
-      NUMERALS[1] + NUMERALS[1] + NUMERALS[1]
-    elsif number == 4
-      NUMERALS[1] + NUMERALS[5]
-    elsif number == 6
-      NUMERALS[5] + NUMERALS[1]
-    else
-      NUMERALS[number]
+    NUMERALS.each do |key, val|
+      (number / key).times do
+        @roman_array << val
+        number -= key
+      end
     end
+    @roman_array.join
   end
 end

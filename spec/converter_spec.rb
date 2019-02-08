@@ -28,6 +28,10 @@ describe Converter do
       expect(converter.convert(4)).to eq("IV")
     end
 
+    it 'can convert the number 5 into a roman numeral' do
+      expect(converter.convert(5)).to eq("V")
+    end
+
     it 'can convert the number 6 into a roman numeral using 5 and 1' do
       expect(converter.convert(6)).to eq("VI")
     end
